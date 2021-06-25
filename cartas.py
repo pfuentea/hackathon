@@ -1,6 +1,3 @@
-from _typeshed import StrPath
-
-
 class Card:
     def __init__(self,nombre,coste):
         self.nombre=nombre
@@ -13,6 +10,7 @@ class Hechizo(Card):
         self.magnitud=magnitud
     
     def lanzar(self,Objetivo):
+        #identificar si es una unidad
         if self.stat=="attack" :
             Objetivo.attack+= self.magnitud
         if self.stat=="defense" :
@@ -24,9 +22,7 @@ class Unidad(Card):
         self.atttack=0
         self.defense=0
 
-    def ver_carta(self):
-        print("")
-        print(f"|{self.nombre}|")
-        print("------------------")
-        print(f"|{self.costo}|")
+    def atacar(self,Objetivo):
+        pass
+
 
