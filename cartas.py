@@ -14,9 +14,9 @@ class Hechizo(Card):
         #identificar si es una unidad
         # if target instance Unit:
         if isinstance(Objetivo, Unidad) == True :
-            if self.stat=="attack" :
+            if self.stat=="ataque" :
                 Objetivo.attack+= self.magnitud
-            if self.stat=="defense" :
+            if self.stat=="defensa" :
                 Objetivo.defense+= self.magnitud
         else:
             print( "Target must be a unit!")    
