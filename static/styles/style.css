@@ -10,11 +10,15 @@
 .coin{
     background-image: url('https://lh3.googleusercontent.com/proxy/ruNcrfSKfzRjSFBAX8-YleR5bR9eH-qT1fEkghRrkPy9wAHTOZqar5sK2x30OmOLTwMBYKIBx0wwGo76aPKj95iWS7JOb4EOyA_kerMT7Z6KsnQLXcwaIgBMSg4RM9YOIrE');
     background-repeat: no-repeat;
-    background-size: 50% 60%; 
+    background-size: 50% 65%; 
     background-position: right; 
     
 }
 .value{
-    padding-top: 1rem;
-    padding-right: 1.0rem;
+    padding-top: 0.7rem;
+    padding-right: 0.3rem;
+}
+.name{
+    font-size: 3vw;
+    overflow: hidden;
 }
