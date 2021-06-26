@@ -32,7 +32,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/style.css') }}"
+    />
 
     <script src="{{url_for('static', filename='js/app.js')}}"></script>
 
@@ -91,8 +95,34 @@
 
     <!--magias-->
 
+    <div class="container" class="carta">
+      <div class="card">
+        <div class="card-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-8"><h3>Bongo cat</h3></div>
+              <div class="col-4 text-end coin">
+                <h3 class="value">8</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://media.cdnandroid.com/item_images/1011217/imagen-bongo-cat-musical-instruments-0big.jpg"
+          alt=""
+        />
+        <div class="card-body p-1"></div>
+        <div class="container">
+          <p>
+            Cuando entra en juego elige una de tus cartas tipo aliado y ganara:
+            ATQ +10 .
+          </p>
+        </div>
+      </div>
+    </div>
+
     <form action="/">
-      <input type="submit" value="">
+      <input type="submit" value="siguiente" />
     </form>
   </body>
 </html>
