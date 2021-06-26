@@ -3,16 +3,6 @@ class Card:
         self.nombre=nombre
         self.costo=coste
 
-    def CardToJson(self):
-        if isinstance(self, Unidad) == True :
-            json="{'nombre':"+self.nombre +",'costo':"+str(self.costo)+"}"
-            print("Unidad")
-
-        else:
-            json="{'nombre':'"+self.nombre +"','costo':"+str(self.costo)+" ,'stat':'"+self.stat+"' }"
-            print("Hechizo")
-            return json
-
 class Hechizo(Card):
     def __init__(self,nombre,coste,stat,magnitud):
         super().__init__(nombre,coste)
@@ -29,8 +19,6 @@ class Hechizo(Card):
                 Objetivo.defense+= self.magnitud
         else:
             print( "Target must be a unit!")    
-
-    
 
 class Unidad(Card):
     def __init__(self,nombre,coste,ataque,defensa):
