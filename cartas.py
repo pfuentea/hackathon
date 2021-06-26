@@ -1,12 +1,12 @@
 class Card:
-    def __init__(self, nombre, coste):
-        self.nombre = nombre
-        self.costo = coste
-
+    def __init__(self,nombre,coste,tipo):
+        self.nombre=nombre
+        self.costo=coste
+        self.tipo=tipo
 
 class Hechizo(Card):
     def __init__(self,nombre,coste,stat,magnitud):
-        super().__init__(nombre,coste)
+        super().__init__(nombre,coste,'hechizo')
         self.stat=stat
         self.magnitud=magnitud
     
@@ -23,14 +23,10 @@ class Hechizo(Card):
 
 class Unidad(Card):
     def __init__(self,nombre,coste,ataque,defensa):
-        super().__init__(nombre,coste)
+        super().__init__(nombre,coste,'unidad')
         self.attack=ataque
         self.defense=defensa
 
-
-class Unidad(Card):
-    def __init__(self):
-        self.atttack = 0
-        self.defense = 0
-
-
+    def atacar(self,Objetivo):
+        Objetivo.defense -=self.attack
+        
