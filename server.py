@@ -8,8 +8,9 @@ cartas_por_mostrar=[]
 
 @app.route("/")
 def hello_world():
-    objetos.append(baraja[app.cont])
-    app.cont+=1
+    if app.cont < len(baraja):
+        objetos.append(baraja[app.cont])
+        app.cont+=1
     return render_template('index.html', objetos=objetos)
 
 
