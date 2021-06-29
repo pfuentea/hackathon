@@ -40,7 +40,7 @@ def hello_world():
         #app.cont+=1
 
     #revisar que no me pase de jugadas
-    if app.sgte_jugada < len(jugadas)-1:
+    if app.sgte_jugada < len(jugadas):
         jugadas[app.sgte_jugada]()
         app.sgte_jugada +=1
         return render_template('index.html', objetos=cartas_por_mostrar)

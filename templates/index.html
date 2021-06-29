@@ -40,124 +40,150 @@
 
     <script src="{{url_for('static', filename='js/app.js')}}"></script>
 
-    <title>Document</title>
+    <title>BongoCards</title>
   </head>
   <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BongoCards</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <form action="/">
+                <input class="btn btn-success text-end" type="submit" value="siguiente" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--content-->
     <h1>Template para la Hackathon</h1>
     <ul>
-      {% for objeto in objetos%} 
-        {%if objeto.tipo == 'unidad'%}
-        <!--Unidad-->
-        <div class="flip-box {% if loop.last %}dnone{% endif %}">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <div class="container" class="carta">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-8">
-                          <h3 class="name">{{objeto.nombre}}</h3>
-                        </div>
-                        <div class="col-4 text-end coin">
-                          <h3 class="value">{{objeto.costo}}</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    src="https://media1.tenor.com/images/c51402c453a41f8edad1191eca14a9dc/tenor.gif?itemid=16740203"
-                    alt=""
-                  />
-                  <div class="card-body p-1"></div>
+      {% for objeto in objetos%} {%if objeto.tipo == 'unidad'%}
+      <!--Unidad-->
+      <div class="flip-box {% if loop.last %}dnone{% endif %}">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div class="container" class="carta">
+              <div class="card">
+                <div class="card-header">
                   <div class="container">
                     <div class="row">
-                      <div class="col-4 text-center">
-                        <img
-                          src="https://pngimage.net/wp-content/uploads/2018/06/sword-symbol-png-2.png"
-                          alt=""
-                          class="icon"
-                        />
+                      <div class="col-8">
+                        <h3 class="name">{{objeto.nombre}}</h3>
                       </div>
-                      <div class="col-2 p-2">
-                        <h3>{{objeto.attack}}</h3>
+                      <div class="col-4 text-end coin">
+                        <h3 class="value">{{objeto.costo}}</h3>
                       </div>
-                      <div class="col-4 text-center">
-                        <img
-                          src="https://icon-library.com/images/shield-png-icon/shield-png-icon-25.jpg"
-                          alt=""
-                          class="icon"
-                        />
-                      </div>
-                      <div class="col-2 p-2">
-                        <h3>{{objeto.defense}}</h3>
-                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="https://media1.tenor.com/images/c51402c453a41f8edad1191eca14a9dc/tenor.gif?itemid=16740203"
+                  alt=""
+                />
+                <div class="card-body p-1"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <img
+                        src="https://pngimage.net/wp-content/uploads/2018/06/sword-symbol-png-2.png"
+                        alt=""
+                        class="icon"
+                      />
+                    </div>
+                    <div class="col-2 p-2">
+                      <h3>{{objeto.attack}}</h3>
+                    </div>
+                    <div class="col-4 text-center">
+                      <img
+                        src="https://icon-library.com/images/shield-png-icon/shield-png-icon-25.jpg"
+                        alt=""
+                        class="icon"
+                      />
+                    </div>
+                    <div class="col-2 p-2">
+                      <h3>{{objeto.defense}}</h3>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flip-box-back">
-              <img
-                src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
-                alt=""
-                width="300rem"
-                height="400rem"
-              />
-            </div>
+          </div>
+          <div class="flip-box-back">
+            <img
+              src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
+              alt=""
+              width="300rem"
+              height="400rem"
+            />
           </div>
         </div>
-        {%else%}
-        <!--magias-->
-        <div class="flip-box {% if loop.last %}dnone{% endif %}">
-          <div class="flip-box-inner">
-            <div class="flip-box-front">
-              <div class="container" class="carta">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-8"><h3 class="name">{{objeto.nombre}}</h3></div>
-                        <div class="col-4 text-end coin">
-                          <h3 class="value">{{objeto.costo}}</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    src="https://thumbs.gfycat.com/UnpleasantThisKakarikis-size_restricted.gif"
-                    alt=""
-                  />
-                  <div class="card-body "></div>
+      </div>
+      {%else%}
+      <!--magias-->
+      <div class="flip-box {% if loop.last %}dnone{% endif %}">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <div class="container" class="carta">
+              <div class="card">
+                <div class="card-header">
                   <div class="container">
-                    <p>
-                      Cuando entra en juego elige una de tus cartas tipo aliado y se modificara
-                      {{objeto.stat}}: {{objeto.magnitud}} .
-                    </p>
+                    <div class="row">
+                      <div class="col-8">
+                        <h3 class="name">{{objeto.nombre}}</h3>
+                      </div>
+                      <div class="col-4 text-end coin">
+                        <h3 class="value">{{objeto.costo}}</h3>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <img
+                  src="https://thumbs.gfycat.com/UnpleasantThisKakarikis-size_restricted.gif"
+                  alt=""
+                />
+                <div class="card-body"></div>
+                <div class="container">
+                  <p>
+                    Cuando entra en juego elige una de tus cartas tipo aliado y
+                    se modificara {{objeto.stat}}: {{objeto.magnitud}} .
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="flip-box-back">
-              <img
-                src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
-                alt=""
-                width="300rem"
-                height="400rem"
-              />
-            </div>
+          </div>
+          <div class="flip-box-back">
+            <img
+              src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
+              alt=""
+              width="300rem"
+              height="400rem"
+            />
           </div>
         </div>
-        {%endif%}
-      {% endfor %}
+      </div>
+      {%endif%} {% endfor %}
     </ul>
     <script>
-      $(document).ready(function(){
-        $('.dnone').slideDown(2000,"swing")
-      })
+      $(document).ready(function () {
+        $(".dnone").slideDown(2000, "swing");
+      });
     </script>
-    <form action="/">
-      <input type="submit" value="siguiente" />
-    </form>
+
   </body>
 </html>
