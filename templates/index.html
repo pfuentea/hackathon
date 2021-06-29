@@ -61,8 +61,8 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <form action="/">
-                <input class="btn btn-success text-end" type="submit" value="siguiente" />
+              <form action="/" class="text-end">
+                <input class="btn btn-success boton" type="submit" value="siguiente" />
               </form>
             </li>
           </ul>
@@ -71,7 +71,8 @@
     </nav>
 
     <!--content-->
-    <h1>Template para la Hackathon</h1>
+    
+    <h1 class="text-center">Template para la Hackathon</h1>
     <ul>
       {% for objeto in objetos%} {%if objeto.tipo == 'unidad'%}
       <!--Unidad-->
