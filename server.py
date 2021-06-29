@@ -28,7 +28,32 @@ def jugada3():
     cartas_por_mostrar.append(c1)
     cartas_por_mostrar.append(c2)
 
-jugadas=[jugada1,jugada2,jugada3]
+
+def jugada4():
+    cartas_por_mostrar.clear()
+    c1=criaturas[0]
+    h1=spells[1]
+    h1.lanzar(c1) 
+    cartas_por_mostrar.append(h1)
+    cartas_por_mostrar.append(c1)
+
+def jugada5():
+    cartas_por_mostrar.clear()
+    c1=criaturas[0]
+    h1=spells[2]
+    h1.lanzar(c1) 
+    cartas_por_mostrar.append(h1)
+    cartas_por_mostrar.append(c1)
+
+def jugada6():
+    cartas_por_mostrar.clear()
+    c1=criaturas[0]
+    c2=criaturas[1]
+    c1.atacar(c2)
+    cartas_por_mostrar.append(c1)
+    cartas_por_mostrar.append(c2)
+
+jugadas=[jugada1,jugada2,jugada3,jugada4,jugada5,jugada6]
 
 app.sgte_jugada=0 
 
@@ -43,7 +68,9 @@ def hello_world():
     if app.sgte_jugada < len(jugadas):
         jugadas[app.sgte_jugada]()
         app.sgte_jugada +=1
-        return render_template('index.html', objetos=cartas_por_mostrar)
-
+        boton="on"
+        if app.sgte_jugada == len(jugadas):
+            boton="off"
+        return render_template('index.html', objetos=cartas_por_mostrar,boton=boton)
 
 app.run(debug=True)
