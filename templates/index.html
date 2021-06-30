@@ -47,25 +47,18 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">BongoCards</a>
+        {%if boton != 'off'%}
         <form action="/" class="text-end">
           <input class="btn btn-success" type="submit" value="siguiente" />
         </form>
-        
+        {%endif%}
       </div>
     </nav>
 
     <!--content-->
-    
-    <h1 class="text-center">Template para la Hackathon</h1>
+    <h1>Template para la Hackathon</h1>
     <ul>
-      <div class="container">
-        <div class="row">
-
-    
-
-      
       {% for objeto in objetos%} {%if objeto.tipo == 'unidad'%}
-      <div class="col-6">
       <!--Unidad-->
       <div class="flip-box {% if loop.last %}dnone{% endif %}">
         <div class="flip-box-inner">
@@ -127,7 +120,6 @@
         </div>
       </div>
       {%else%}
-      <div class="col-6">
       <!--magias-->
       <div class="flip-box {% if loop.last %}dnone{% endif %}">
         <div class="flip-box-inner">
@@ -170,11 +162,7 @@
           </div>
         </div>
       </div>
-      {%endif%} 
-      </div>
-      {% endfor %}
-    </div>
-    </div>
+      {%endif%} {% endfor %}
     </ul>
     <script>
       $(document).ready(function () {
