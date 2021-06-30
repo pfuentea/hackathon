@@ -47,10 +47,11 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">BongoCards</a>
+        {%if boton != 'off'%}
         <form action="/" class="text-end">
           <input class="btn btn-success" type="submit" value="siguiente" />
-        </form>
-        
+        </form>   
+        {%endif%}     
       </div>
     </nav>
 

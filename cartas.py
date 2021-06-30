@@ -1,8 +1,9 @@
 class Card:
-    def __init__(self,nombre,coste,tipo):
+    def __init__(self,nombre,coste,tipo,imagen):
         self.nombre=nombre
         self.costo=coste
         self.tipo=tipo
+        self.imagen=imagen
 
 class Hechizo(Card):
     def __init__(self,nombre,coste,stat,magnitud):
