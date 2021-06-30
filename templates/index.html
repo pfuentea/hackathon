@@ -40,13 +40,13 @@
 
     <script src="{{url_for('static', filename='js/app.js')}}"></script>
 
-    <title>BongoCards</title>
+    <title>LAAG TEAM HACKATON</title>
   </head>
   <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">BongoCards</a>
+        <a class="navbar-brand" href="#">LAAAAG TEAM</a>
         {%if boton != 'off'%}
         <form action="/" class="text-end">
           <input class="btn btn-success" type="submit" value="siguiente" />
@@ -56,7 +56,7 @@
     </nav>
 
     <!--content-->
-    <h1>Template para la Hackathon</h1>
+    <h1  class="text-center" > Hackathon: Jugada {{jugada}} </h1>
     <ul>
       <div class="container">
         <div class="row">
@@ -82,7 +82,7 @@
                   </div>
                 </div>
                 <img
-                  src="https://media1.tenor.com/images/c51402c453a41f8edad1191eca14a9dc/tenor.gif?itemid=16740203"
+                  src="/static/images/tenor.gif"
                   alt=""
                 />
                 <div class="card-body p-1"></div>
@@ -143,7 +143,7 @@
                   </div>
                 </div>
                 <img
-                  src="https://thumbs.gfycat.com/UnpleasantThisKakarikis-size_restricted.gif"
+                  src="/static/images/gatito2.gif"
                   alt=""
                 />
                 <div class="card-body"></div>
@@ -252,7 +252,7 @@
                       </div>
                     </div>
                     <img
-                      src="/static/images/call_of_lag.png"
+                      src="/static/images/{{url_bensan}}"
                       alt=""
                       width="320rem"
                       height="220rem"

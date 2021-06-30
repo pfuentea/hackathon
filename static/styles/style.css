@@ -6,7 +6,13 @@
     rgba(253, 187, 45, 1) 100%
   );
 }
-
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20201015/pngtree-red-to-white-gradient-low-poly-abstract-background-illustration-image_418598.jpg");
+}
 .card {
   width: 20rem;
   height: 25rem;

@@ -56,7 +56,7 @@ def jugada6():
 jugadas=[jugada1,jugada2,jugada3,jugada4,jugada5,jugada6]
 
 app.sgte_jugada=0 
-
+url_bensan='call_of_lag.png'
 
 @app.route("/")
 def hello_world():
@@ -71,6 +71,6 @@ def hello_world():
         boton="on"
         if app.sgte_jugada == len(jugadas):
             boton="off"
-        return render_template('index.html', objetos=cartas_por_mostrar,boton=boton)
+        return render_template('index.html', objetos=cartas_por_mostrar,boton=boton,url_bensan=url_bensan,jugada=app.sgte_jugada)
 
 app.run(debug=True)
