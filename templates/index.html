@@ -50,13 +50,8 @@
         {%if boton != 'off'%}
         <form action="/" class="text-end">
           <input class="btn btn-success" type="submit" value="siguiente" />
-<<<<<<< HEAD
         </form>
         {%endif%}
-=======
-        </form>   
-        {%endif%}     
->>>>>>> 9e6a882adbf721ac6abbb51c4ccda5a835a35e4e
       </div>
     </nav>
 
@@ -169,11 +164,119 @@
       </div>
       {%endif%} {% endfor %}
     </ul>
+    <h1 class="text-center mt-2 mb-2">Legendarias</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="container">
+                  <div class="card legendary">
+                    <div class="card-header">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-8">
+                            <h3 class="name">Lagman</h3>
+                          </div>
+                          <div class="col-4 text-end coin">
+                            <h3 class="value">9</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img src="/static/images/laagman.png" alt="" width="100%" />
+                    <div class="card-body p-1"></div>
+                    <div class="container">
+                      <h6>Laaaa...aaagggg</h6>
+                      <div class="row">
+                        <div class="col-4 text-center">
+                          <img
+                            src="https://pngimage.net/wp-content/uploads/2018/06/sword-symbol-png-2.png"
+                            alt=""
+                            class="icon"
+                          />
+                        </div>
+                        <div class="col-2 p-2">
+                          <h3>2</h3>
+                        </div>
+                        <div class="col-4 text-center">
+                          <img
+                            src="https://icon-library.com/images/shield-png-icon/shield-png-icon-25.jpg"
+                            alt=""
+                            class="icon"
+                          />
+                        </div>
+                        <div class="col-2 p-2">
+                          <h3>10</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <img
+                  src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
+                  alt=""
+                  width="300rem"
+                  height="400rem"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="container">
+                  <div class="card legendary">
+                    <div class="card-header">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-8">
+                            <h3 class="name">Call of Lag</h3>
+                          </div>
+                          <div class="col-4 text-end coin">
+                            <h3 class="value">5</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src="/static/images/call_of_lag.png"
+                      alt=""
+                      width="320rem"
+                      height="220rem"
+                    />
+                    <div class="card-body"></div>
+                    <div class="container">
+                      <p>
+                        Cuando entra en juego debes esperar un turno e invocas
+                        gratis a lagman si esta en tu mazo o cementerio.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <img
+                  src="https://www.masgamers.com/wp-content/uploads/2016/09/undertale-dog.jpg"
+                  alt=""
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       $(document).ready(function () {
         $(".dnone").slideDown(2000, "swing");
       });
     </script>
-
   </body>
 </html>
