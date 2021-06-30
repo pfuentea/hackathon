@@ -58,7 +58,11 @@
     <!--content-->
     <h1>Template para la Hackathon</h1>
     <ul>
-      {% for objeto in objetos%} {%if objeto.tipo == 'unidad'%}
+      <div class="container">
+        <div class="row">
+        {% for objeto in objetos%}
+          <div class="col-6">
+          {%if objeto.tipo == 'unidad'%}
       <!--Unidad-->
       <div class="flip-box {% if loop.last %}dnone{% endif %}">
         <div class="flip-box-inner">
@@ -162,7 +166,9 @@
           </div>
         </div>
       </div>
-      {%endif%} {% endfor %}
+      {%endif%}
+    </div>
+    {% endfor %}
     </ul>
     <h1 class="text-center mt-2 mb-2">Legendarias</h1>
     <div class="container">

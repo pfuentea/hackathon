@@ -6,8 +6,8 @@ class Card:
         self.imagen=imagen
 
 class Hechizo(Card):
-    def __init__(self,nombre,coste,stat,magnitud):
-        super().__init__(nombre,coste,'hechizo')
+    def __init__(self,nombre,coste,stat,magnitud,imagen):
+        super().__init__(nombre,coste,'hechizo',imagen)
         self.stat=stat
         self.magnitud=magnitud
     
@@ -23,8 +23,8 @@ class Hechizo(Card):
             print( "Target must be a unit!")    
 
 class Unidad(Card):
-    def __init__(self,nombre,coste,ataque,defensa):
-        super().__init__(nombre,coste,'unidad')
+    def __init__(self,nombre,coste,ataque,defensa,imagen):
+        super().__init__(nombre,coste,'unidad',imagen)
         self.attack=ataque
         self.defense=defensa
 
